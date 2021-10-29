@@ -4,9 +4,18 @@ import { gsap } from "gsap";
 
 function App() {
   const boxRef = useRef();
+  const q = gsap.utils.selector(boxRef);
+  gsap.registerEffect({
+    name: "fade",
+    defaults: { duration: 4 },
+    effect: (targets, config) => {
+      return gsap.to(targets, { duration: config.duration, opacity: 1 });
+    },
+  });
 
   useEffect(() => {
-    gsap.to(boxRef.current, { y: 300, repeat: -1, yoyo: true });
+    gsap.to(boxRef.current, { y: 300 });
+    gsap.effects.fade(q(".fade-letters"));
   }, []);
   return (
     <div className="App">

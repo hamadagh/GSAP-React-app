@@ -6,3 +6,6 @@
 .letters {
   font-size: 140px;
 }
+.fade-letters {
+  opacity: 0;
+}
