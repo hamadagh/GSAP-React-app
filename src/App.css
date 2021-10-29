@@ -1,0 +1,8 @@
+.box {
+  width: 100%;
+  text-align: center;
+}
+.fade-letters,
+.letters {
+  font-size: 140px;
+}
